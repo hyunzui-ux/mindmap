@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콘텐츠 데이터 주권 마인드맵</title>
+    
+    <!-- Tailwind CSS (스타일 라이브러리) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 내 CSS 파일 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-slate-900 text-slate-100 p-6 md:p-12 font-sans overflow-hidden">
+    
+    <!-- 헤더 부분 -->
+    <div class="mb-12 text-center">
+        <h1 class="text-3xl font-bold mb-2 flex justify-center items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400">
+                <rect x="16" y="16" width="6" height="6" rx="1"/>
+                <rect x="2" y="16" width="6" height="6" rx="1"/>
+                <rect x="9" y="2" width="6" height="6" rx="1"/>
+                <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/>
+                <path d="M12 12V8"/>
+            </svg>
+            콘텐츠 데이터 주권 마인드맵
+        </h1>
+        <p class="text-slate-400">AI 시대, K-콘텐츠의 가치와 권리 구조 분석</p>
+    </div>
+
+    <!-- 메인 마인드맵 영역 -->
+    <div class="relative max-w-5xl mx-auto h-[600px] flex items-center justify-center">
+        
+        <!-- 연결선 SVG -->
+        <svg class="absolute inset-0 w-full h-full pointer-events-none" id="connections">
+            <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569" />
+                </marker>
+            </defs>
+            <!-- JavaScript로 선을 그립니다 -->
+        </svg>
+
+        <!-- 중앙 노드 -->
+        <div class="relative z-10 w-48 h-48 rounded-full bg-indigo-600 shadow-[0_0_50px_rgba(79,70,229,0.4)] flex flex-col items-center justify-center text-center p-4 border-4 border-indigo-400 animate-pulse-slow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M3 5V19A9 3 0 0 0 21 19V5"/>
+                <path d="M3 12A9 3 0 0 0 21 12"/>
+            </svg>
+            <span class="font-black leading-tight text-lg">K-콘텐츠 & AI 데이터 자산</span>
+        </div>
+
+        <!-- 브랜치 노드들 (JavaScript로 생성) -->
+        <div id="nodes-container"></div>
+    </div>
+
+    <!-- 하단 정보 -->
+    <div class="fixed bottom-8 left-8 right-8 flex flex-col md:flex-row justify-between items-end gap-4 pointer-events-none">
+        <div class="bg-slate-800/80 backdrop-blur p-4 rounded-xl border border-slate-700 pointer-events-auto max-w-xs">
+            <h4 class="text-xs font-bold text-slate-500 mb-2">도움말</h4>
+            <p class="text-xs text-slate-400">각 노드를 클릭하면 AI 학습 데이터 자산화에 대한 심층 분석 내용을 확인할 수 있습니다.</p>
+        </div>
+        
+        <div class="flex gap-2 pointer-events-auto">
+            <div class="bg-indigo-900/50 px-4 py-2 rounded-full border border-indigo-700 text-xs font-bold text-indigo-300">
+                핵심 산업: 웹툰 (2조 원 규모)
+            </div>
+            <div class="bg-emerald-900/50 px-4 py-2 rounded-full border border-emerald-700 text-xs font-bold text-emerald-300">
+                성장 동력: K-콘텐츠 데이터
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript 파일 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>
